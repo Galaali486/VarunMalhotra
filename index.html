@@ -274,6 +274,16 @@
   src="https://www.facebook.com/tr?id=1986714761744918&ev=PageView&noscript=1"
   /></noscript>
 </head>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.elButton'); // Select all buttons on the page
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        fbq('track', 'ButtonClicked'); // Track custom event for button click
+      });
+    });
+  });
+</script>
 
 <body data-affiliate-param="affiliate_id" data-show-progress="true">
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important">
@@ -3036,7 +3046,7 @@
     crossorigin="anonymous"></script>
 
   
-    <a id="myBtn" href="https://bit.ly/499ErU8"><img src="Varun Malhotra _ Changing The Way India Invests_files/join.png" class="border__image" width="100%"></a>
+    <a id="myBtn" class="elButton" href="https://bit.ly/499ErU8"><img src="Varun Malhotra _ Changing The Way India Invests_files/join.png" class="border__image" width="100%"></a>
   <style>
     body{
       position: relative;
